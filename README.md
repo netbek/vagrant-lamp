@@ -4,22 +4,22 @@ Base box build script for Debian 7 (wheezy)
 
 ## Download
 
-http://debian.mirror.ac.za/debian-cd/7.8.0/i386/iso-cd/debian-7.8.0-i386-CD-1.iso
-http://dlc-cdn.sun.com/virtualbox/4.3.26/virtualbox-4.3_4.3.26-98988~Debian~wheezy_i386.deb
-http://dlc-cdn.sun.com/virtualbox/4.3.26/VBoxGuestAdditions_4.3.26.iso
+* http://debian.mirror.ac.za/debian-cd/7.8.0/i386/iso-cd/debian-7.8.0-i386-CD-1.iso
+* http://dlc-cdn.sun.com/virtualbox/4.3.26/virtualbox-4.3_4.3.26-98988~Debian~wheezy_i386.deb
+* http://dlc-cdn.sun.com/virtualbox/4.3.26/VBoxGuestAdditions_4.3.26.iso
 
 ## Create new VM in VirtualBox 
 
-Name: wheezy32-lamp
-Type: Linux
-Version: Debian 32-bit
-Memory: 512 MB
-Select: Create a virtual hard drive now
-Select: VMDK
-Select: Dynamically allocated
-File location: wheezy32-lamp
-Size: 8 GB
-Change settings
+* Name: wheezy32-lamp
+* Type: Linux
+* Version: Debian 32-bit
+* Memory: 512 MB
+* Select: Create a virtual hard drive now
+* Select: VMDK
+* Select: Dynamically allocated
+* File location: wheezy32-lamp
+* Size: 8 GB
+* Change settings
 
 Motherboard:
 
@@ -41,19 +41,15 @@ Start VM
 
 ## Install Debian
 
-Set your hostname (vagrant-debian-wheezy)
-Set the domain name (vagrantup.com)
-Set the root password (vagrant)
-Set up a user (vagrant with vagrant as the password too)
-Follow the defaults to set up the disk, all one partition
-
-Deselect all tasks except "Standard system utilities" and continute to allow the system to install the required packages.
-
-Next the installer asks about GRUB. Just take all the defaults and install it to the root of the drive.
-
-Shutdown VM
-
-Remove Debian ISO from CD/DVD and insert VBoxGuestAdditions ISO (VirtualBox > vm > Settings > Storage > CD/DVD)
+* Set hostname (vagrant-debian-wheezy)
+* Set domain name (vagrantup.com)
+* Set root password (vagrant)
+* Set up a user (vagrant with vagrant as the password too)
+* Follow the defaults to set up the disk, all one partition
+* Deselect all tasks except "Standard system utilities" and continute to allow the system to install the required packages.
+* Next the installer asks about GRUB. Just take all the defaults and install it to the root of the drive.
+* Shutdown VM
+* Remove Debian ISO from CD/DVD and insert VBoxGuestAdditions ISO (VirtualBox > vm > Settings > Storage > CD/DVD)
 
 ## Install LAMP
 
