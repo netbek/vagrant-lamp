@@ -83,14 +83,13 @@ Start VM
 
 Log in as root
 
-Zero free disk space:
+Zero free disk space and shutdown VM:
 ```
-cd ~/vagrant-lamp
-chmod 0700 package.sh
-bash package.sh
+init 1
+mount -o remount,ro /dev/sda1
+zerofree /dev/sda1
+shutdown -h now
 ```
-
-Shutdown VM
 
 On host, package the base box:
 ```
