@@ -52,15 +52,15 @@ service apache2 restart
 mkdir -p /var/www/logs
 mkdir -p /var/www/public_html
 
-mv /etc/apache2/sites-available/default /etc/apache2/sites-available/default.backup
-mv /etc/apache2/sites-available/default-ssl /etc/apache2/sites-available/default-ssl.backup
-wget https://raw.githubusercontent.com/netbek/vagrant-lamp/master/etc/apache2/sites-available/default -O /etc/apache2/sites-available/default
-wget https://raw.githubusercontent.com/netbek/vagrant-lamp/master/etc/apache2/sites-available/default-ssl -O /etc/apache2/sites-available/default-ssl
+cp /etc/apache2/sites-available/default /etc/apache2/sites-available/default.backup
+cp /etc/apache2/sites-available/default-ssl /etc/apache2/sites-available/default-ssl.backup
+cp -f ${HOME}/vagrant-lamp/etc/apache2/sites-available/default /etc/apache2/sites-available/default
+cp -f ${HOME}/vagrant-lamp/etc/apache2/sites-available/default-ssl /etc/apache2/sites-available/default-ssl
 
 # Install mysql
 apt-get install -y mysql-server
-mv /etc/mysql/my.cnf /etc/mysql/my.cnf.backup
-wget https://raw.githubusercontent.com/netbek/vagrant-lamp/master/etc/mysql/my.cnf -O /etc/mysql/my.cnf
+cp /etc/mysql/my.cnf /etc/mysql/my.cnf.backup
+cp -f ${HOME}/vagrant-lamp/etc/mysql/my.cnf /etc/mysql/my.cnf
 
 # Clear innodb logfiles and restart mysql to apply config
 service mysql stop
@@ -79,10 +79,10 @@ pecl install apc
 pecl install xhprof-beta
 pecl install zendopcache
 
-mv /etc/php5/apache2/php.ini /etc/php5/apache2/php.ini.backup
-mv /etc/php5/cli/php.ini /etc/php5/cli/php.ini.backup
-wget https://raw.githubusercontent.com/netbek/vagrant-lamp/master/etc/php5/apache2/php.ini -O /etc/php5/apache2/php.ini
-wget https://raw.githubusercontent.com/netbek/vagrant-lamp/master/etc/php5/cli/php.ini -O /etc/php5/cli/php.ini
+cp /etc/php5/apache2/php.ini /etc/php5/apache2/php.ini.backup
+cp /etc/php5/cli/php.ini /etc/php5/cli/php.ini.backup
+cp -f ${HOME}/vagrant-lamp/etc/php5/apache2/php.ini /etc/php5/apache2/php.ini
+cp -f ${HOME}/vagrant-lamp/etc/php5/cli/php.ini /etc/php5/cli/php.ini
 service apache2 restart
 
 # Install composer
