@@ -96,3 +96,10 @@ On host, package the base box:
 cd "${HOME}/VirtualBox VMs"
 vagrant package --base wheezy32-lamp --output wheezy32-lamp.box
 ```
+
+## Add or remove a base box
+
+```
+vagrant box add wheezy32-lamp wheezy32-lamp.box
+vagrant box remove wheezy32-lamp
+```
