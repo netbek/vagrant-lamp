@@ -66,9 +66,9 @@ Update APT, install git, clone repo, start build:
 ```
 apt-get update
 apt-get install -y git
-cd ~
+cd ${HOME}
 git clone https://github.com/netbek/vagrant-lamp
-cd ~/vagrant-lamp
+cd ${HOME}/vagrant-lamp
 chmod 0700 build.sh
 bash build.sh
 ```
@@ -93,6 +93,6 @@ shutdown -h now
 
 On host, package the base box:
 ```
-cd "~/VirtualBox VMs"
+cd "${HOME}/VirtualBox VMs"
 vagrant package --base wheezy32-lamp --output wheezy32-lamp.box
 ```
