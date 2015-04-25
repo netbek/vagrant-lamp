@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Insert VirtualBox guest additions CD
-# VirtualBox > [vm] > Settings > Storage > CD/DVD > choose VBoxGuestAdditions_x.x.x.iso
-
 # Remove CD-ROM from APT sources
 nano /etc/apt/sources.list
 
@@ -126,3 +123,5 @@ apt-get install -y linux-headers-$(uname -r)
 mount /media/cdrom
 sh /media/cdrom/VBoxLinuxAdditions.run
 umount /media/cdrom
+
+shutdown -h now
