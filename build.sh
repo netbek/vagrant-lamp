@@ -47,7 +47,7 @@ a2enmod rewrite
 service apache2 restart
 
 mkdir -p /var/www/logs
-mkdir -p /var/www/public_html
+mkdir -p /var/www/html
 
 cp /etc/apache2/sites-available/default /etc/apache2/sites-available/default.backup
 cp /etc/apache2/sites-available/default-ssl /etc/apache2/sites-available/default-ssl.backup
@@ -107,12 +107,12 @@ drush status
 # nano drush.ini
 
 # Install phpmyadmin
-cd /var/www/public_html
-rm -f phpMyAdmin-4.4.3-english.tar.gz
-rm -fr phpmyadmin
-wget http://sourceforge.net/projects/phpmyadmin/files/phpMyAdmin/4.4.3/phpMyAdmin-4.4.3-english.tar.gz/download -O phpMyAdmin-4.4.3-english.tar.gz
-tar -xzvf phpMyAdmin-4.4.3-english.tar.gz
-mv phpMyAdmin-4.4.3-english phpmyadmin
+# cd /var/www/html
+# rm -f phpMyAdmin-4.4.3-english.tar.gz
+# rm -fr phpmyadmin
+# wget http://sourceforge.net/projects/phpmyadmin/files/phpMyAdmin/4.4.3/phpMyAdmin-4.4.3-english.tar.gz/download -O phpMyAdmin-4.4.3-english.tar.gz
+# tar -xzvf phpMyAdmin-4.4.3-english.tar.gz
+# mv phpMyAdmin-4.4.3-english phpmyadmin
 
 # Remove VirtualBox guest additions installed by Debian
 apt-get purge virtualbox-ose-guest* xserver*
