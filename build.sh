@@ -46,13 +46,14 @@ a2enmod mime
 a2enmod rewrite
 service apache2 restart
 
-mkdir -p /var/www/logs
-mkdir -p /var/www/html
+mkdir -p /var/www/domains
+# mkdir -p /var/www/logs
+# mkdir -p /var/www/html
 
-cp /etc/apache2/sites-available/default /etc/apache2/sites-available/default.backup
-cp /etc/apache2/sites-available/default-ssl /etc/apache2/sites-available/default-ssl.backup
-cp -f ${HOME}/vagrant-lamp/etc/apache2/sites-available/default /etc/apache2/sites-available/default
-cp -f ${HOME}/vagrant-lamp/etc/apache2/sites-available/default-ssl /etc/apache2/sites-available/default-ssl
+# cp /etc/apache2/sites-available/default /etc/apache2/sites-available/default.backup
+# cp /etc/apache2/sites-available/default-ssl /etc/apache2/sites-available/default-ssl.backup
+# cp -f ${HOME}/vagrant-lamp/etc/apache2/sites-available/default /etc/apache2/sites-available/default
+# cp -f ${HOME}/vagrant-lamp/etc/apache2/sites-available/default-ssl /etc/apache2/sites-available/default-ssl
 
 # Install mysql
 apt-get install -y mysql-server
