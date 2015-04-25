@@ -64,10 +64,10 @@ cp -f ${HOME}/vagrant-lamp/etc/mysql/my.cnf /etc/mysql/my.cnf
 
 # Clear innodb logfiles and restart mysql to apply config
 service mysql stop
-mkdir -p "${G_MYSQL_DATA_DIR}"
-for TMP in `ls "${G_MYSQL_DATA_DIR}" | grep -i '^ib_logfile'`
+mkdir -p "/var/lib/mysql"
+for TMP in `ls "/var/lib/mysql" | grep -i '^ib_logfile'`
 do
-  rm -f "${G_MYSQL_DATA_DIR}/${TMP}"
+  rm -f "/var/lib/mysql/${TMP}"
 done
 service mysql start
 
