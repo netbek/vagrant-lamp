@@ -20,6 +20,15 @@ chmod 0700 /home/vagrant/.ssh
 chmod 0600 /home/vagrant/.ssh/authorized_keys
 chown -R vagrant:vagrant /home/vagrant/.ssh
 
+# Add insecure SSH key for root user
+mkdir /root/.ssh
+cd /root/.ssh
+wget https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub
+mv vagrant.pub authorized_keys
+chmod 0700 /root/.ssh
+chmod 0600 /root/.ssh/authorized_keys
+chown -R root:root /root/.ssh
+
 # Modify SSH config for speed
 echo "UseDNS no" >> /etc/ssh/sshd_config
 
