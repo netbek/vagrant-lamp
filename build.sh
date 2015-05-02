@@ -70,7 +70,7 @@ done
 service mysql start
 
 # Install php
-apt-get install -y php5 php5-mysql php-pear php5-gd php5-curl libpcre3-dev php5-dev graphviz
+apt-get install -y php5 php5-mysql php-pear php5-gd php5-curl php5-sqlite sqlite3 libpcre3-dev php5-dev graphviz
 
 # Install apc, xhprof
 pecl install apc
