@@ -12,7 +12,7 @@ apt-get install -y openssh-server zerofree sudo
 echo "vagrant ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # Add insecure SSH key for vagrant user
-mkdir /home/vagrant/.ssh
+mkdir -p /home/vagrant/.ssh
 cd /home/vagrant/.ssh
 wget https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub
 mv vagrant.pub authorized_keys
@@ -21,7 +21,7 @@ chmod 0600 /home/vagrant/.ssh/authorized_keys
 chown -R vagrant:vagrant /home/vagrant/.ssh
 
 # Add insecure SSH key for root user
-mkdir /root/.ssh
+mkdir -p /root/.ssh
 cd /root/.ssh
 wget https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub
 mv vagrant.pub authorized_keys
