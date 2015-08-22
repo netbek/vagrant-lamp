@@ -118,11 +118,11 @@ drush status
 
 # Install phpmyadmin
 # cd /var/www/html
-# rm -f phpMyAdmin-4.4.3-english.tar.gz
+# rm -f phpMyAdmin-4.4.13.1-english.tar.gz
 # rm -fr phpmyadmin
-# wget http://sourceforge.net/projects/phpmyadmin/files/phpMyAdmin/4.4.3/phpMyAdmin-4.4.3-english.tar.gz/download -O phpMyAdmin-4.4.3-english.tar.gz
-# tar -xzvf phpMyAdmin-4.4.3-english.tar.gz
-# mv phpMyAdmin-4.4.3-english phpmyadmin
+# wget https://files.phpmyadmin.net/phpMyAdmin/4.4.13.1/phpMyAdmin-4.4.13.1-english.tar.gz -O phpMyAdmin-4.4.13.1-english.tar.gz
+# tar -xzvf phpMyAdmin-4.4.13.1-english.tar.gz
+# mv phpMyAdmin-4.4.13.1-english phpmyadmin
 
 # Remove VirtualBox guest additions installed by Debian
 apt-get purge virtualbox-ose-guest* xserver*
